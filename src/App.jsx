@@ -3,14 +3,14 @@ import './App.css'
 import Navbar from './component/Navbar/Navbar.jsx' 
 
 function App() {
-  const title = "vite+ react"
+  const title = "Curso de React js coder"
 
   return (
   <>
   <Navbar/>
   <div>
-  <h1> titulo {title}</h1>
-  <h2>subtitulo {title}</h2>
+  <h1> Bienvenidos {title}</h1>
+  
   </div>
   </>
   )
