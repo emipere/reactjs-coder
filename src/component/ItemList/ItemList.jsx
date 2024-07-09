@@ -2,7 +2,7 @@ import Item from "../Item/Item";
 const ItemList = () => {
     return(
         <>
-         <div>Item List </div>
+         <div>Catalogo de Productos </div>
          <Item/>
     
         </>
