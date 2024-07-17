@@ -10,7 +10,7 @@ function App() {
 
   return (
   <>
-  <Navbar categories={categories} title = "Logo"/>
+  <Navbar categories={categories} title ="EP-Sport"/>
   <ItemListContainer title={title}/>
   
   </>
@@ -18,4 +18,3 @@ function App() {
 }
 
 export default App
- 
