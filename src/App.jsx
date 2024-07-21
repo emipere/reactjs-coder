@@ -5,7 +5,7 @@ import ItemListContainer from './component/ItemListContainer/ItemListContainer.j
 import { categories } from "./mock/mockData.js";
 
 function App() {
-  const title = "Bienvenidos a la mejor tienda deportiva"
+  const title = <h4>{"Bienvenidos a la mejor tienda deportiva"}</h4>
   
 
   return (
