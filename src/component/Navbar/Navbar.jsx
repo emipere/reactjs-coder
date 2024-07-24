@@ -2,12 +2,14 @@
 import CartWidget from "../CartWidget/CartWidget";
 import "./Navbar.css"
 import NavbarLink from "./NavbarLink";
+import logo from "../../assets/logo.png";
 
 const Navbar = ({categories, title} ) => {
 
   return(
     <>
     <div>
+      <img src={logo} alt="logo de EP-Sport"/>
       <h1>{title}</h1>
       </div>
     <nav className="navItems">

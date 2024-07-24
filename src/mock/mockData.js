@@ -1,4 +1,4 @@
-export const categories = [ " gorra " , " campera " , " remera " , " short ", " medias " ];
+export const categories = [ " home "," gorra " , " campera " , " remera " , " short ", " medias "," contacto ", " devoluciones " ];
 
  
     
@@ -7,7 +7,7 @@ export const items = [
     id: 1,
     nombre: "Gorra",
     precio: 2000,
-    img: "img/gorra.js",
+    img: "asset/gorra.jpg",
     stock: 10,
     categories:["gorra"],
   },
@@ -15,7 +15,7 @@ export const items = [
     id: 2,
     nombre: "Campera",
     precio: 12000,
-    img: "img/campera.jpg",
+    img: "asset/campera.jpg",
     stock: 15,
     categories:["campera"],
   },
@@ -23,7 +23,7 @@ export const items = [
     id: 3,
     nombre: "Remera",
     precio: 8000,
-    img: "img/remera.jpg",
+    img: "asset/remera.jpg",
     stock: 18,
     categories:["remera"],
   },
@@ -31,7 +31,7 @@ export const items = [
     id: 4,
     nombre: "Short",
     precio: 3000,
-    img: "img/short.jpg",
+    img: "asset/short.jpg",
     stock: 21,
     categories:["short"],
   },
@@ -39,7 +39,7 @@ export const items = [
     id: 5,
     nombre: "Medias",
     precio: 1500,
-    img: "img/medias.jpg",
+    img: "asset/medias.jpg",
     stock: 19,
     categories:["medias"],
   },

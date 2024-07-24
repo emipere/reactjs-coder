@@ -30,7 +30,7 @@ const ItemListContainer = ({ title }) => {
   
 
 
-// quede aca en minuto 1.12 de la clase 3
+
   return (
     <>
     <button onClick={()=> setCat ("campera")}> Set Cat = campera </button>
