@@ -1,9 +1,7 @@
 
 import './App.css'
-import Navbar from './component/Navbar/Navbar.jsx'
 import ItemListContainer from './component/ItemListContainer/ItemListContainer.jsx'; 
-import { categories } from "./mock/mockData.js";
-
+import Layout from './pages/Layout.jsx';
 
 function App() {
   const title = <h4>{"Bienvenidos a la mejor tienda deportiva"}</h4>
@@ -11,9 +9,11 @@ function App() {
 
   return (
   <>
-  <Navbar categories={categories} title = "EP-Sport"/>
+  <Layout>
   <ItemListContainer title={title}/>
-  
+  </Layout>
+
+  {/* <Navbar categories={categories} title = "EP-Sport"/> */}
   </>
   )
 }

@@ -1,16 +1,14 @@
-import {useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import ItemList from "../ItemList/ItemList";
 import "./ItemListContainer.css";
 import { getProducts } from "../../utils/fetchData";
-
-
 
 // nota de clase 3 16-7-24
 // este componente tiene la logica de traer los productos del backend, por el momento solo los importamos de nuestro mock
 
 const ItemListContainer = ({ title }) => {
-   const [products, setproducts]=useState ([]);
-   const [cat,setCat] = useState ("gorra");
+  const [products, setproducts] = useState([]);
+  const [cat, setCat] = useState("gorra");
 
   useEffect(() => {
     console.log("se monto el compo");
@@ -27,17 +25,14 @@ const ItemListContainer = ({ title }) => {
         console.log("finalizo la promesa");
       });
   }, [cat]);
-  
-
-
 
   return (
     <>
-    <button onClick={()=> setCat ("campera")}> Set Cat = campera </button>
-    <button onClick={()=> setCat ("remera")}> Set Cat = remera </button>
-    <button onClick={()=> setCat ("short")}> Set Cat = short </button>
-    <button onClick={()=> setCat ("medias")}> Set Cat = medias </button> 
-      
+      <button onClick={() => setCat("campera")}> Set Cat = campera </button>
+      <button onClick={() => setCat("remera")}> Set Cat = remera </button>
+      <button onClick={() => setCat("short")}> Set Cat = short </button>
+      <button onClick={() => setCat("medias")}> Set Cat = medias </button>
+
       <div className="container">
         <div>{title}</div>
         <ItemList products={products} />
