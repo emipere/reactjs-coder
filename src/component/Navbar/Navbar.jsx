@@ -7,6 +7,7 @@ import { categories } from "../../mock/mockData";
 const Navbar = ({ title }) => {
   return (
     <>
+    <nav>
       <div>
         <img src={logo} alt="logo de EP-Sport" />
         <h1>{title}</h1>
@@ -17,8 +18,10 @@ const Navbar = ({ title }) => {
         })}
         ;
       </nav>
+      
 
       <CartWidget />
+      </nav>
     </>
   );
 };

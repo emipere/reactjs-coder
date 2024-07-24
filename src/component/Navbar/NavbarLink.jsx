@@ -1,6 +1,8 @@
+import {Link, NavLink} from "react-router-dom"
+
 const NavbarLink = ({category}) =>{
     return(
-        <a href="#" className="navItem">{category}</a>
+        <Link to={`/${category}`} className="navItem">{category}</Link>
 
     )
 }
