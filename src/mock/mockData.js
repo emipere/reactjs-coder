@@ -1,4 +1,4 @@
-export const categories = [" home "," gorra "," campera "," remera "," short "," medias "," contact "," about "];
+export const categories = [" home "," gorra "," campera "," remera "," short "," medias "," Contact "," AboutUs "];
 
  
     
@@ -9,7 +9,7 @@ export const items = [
     precio: 2000,
     img: "asset/gorra.jpg",
     stock: 10,
-    categories:["gorra"],
+    category:["gorra"],
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ export const items = [
     precio: 12000,
     img: "asset/campera.jpg",
     stock: 15,
-    categories:["campera"],
+    category:["campera"],
   },
   {
     id: 3,
@@ -25,7 +25,7 @@ export const items = [
     precio: 8000,
     img: "asset/remera.jpg",
     stock: 18,
-    categories:["remera"],
+    category:["remera"],
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ export const items = [
     precio: 3000,
     img: "asset/short.jpg",
     stock: 21,
-    categories:["short"],
+    category:["short"],
   },
   {
     id: 5,
@@ -41,6 +41,6 @@ export const items = [
     precio: 1500,
     img: "asset/medias.jpg",
     stock: 19,
-    categories:["medias"],
+    category:["medias"],
   },
 ];

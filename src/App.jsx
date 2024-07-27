@@ -1,25 +1,29 @@
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
+import ItemListContainer from "./component/ItemListContainer/ItemListContainer.jsx";
 import AboutUs from "./component/AboutUs/AboutUs.jsx";
 import Contact from "./component/Contact/Contact.jsx";
-import ItemListContainer from "./component/ItemListContainer/ItemListContainer.jsx";
 import Layout from "./pages/Layout.jsx";
+
+
 
 function App() {
   const title = <h4>{"Bienvenidos a la mejor tienda deportiva"}</h4>;
 
   return (
     <>
+   
       <BrowserRouter>
         <Layout>
           <Routes>
-            <Route path= "/" element = {<ItemListContainer title={title} />}/>
-            <Route path= "/about" element= {<AboutUs />}/>
-             <Route path= "/contact" element={<Contact />}/>
+            {/* <Route path="/" element=/>  {<ItemListContainer title={title} />}            */}
+            <Route path="/Contact" element={<Contact />}/>
+            <Route path="/AboutUs" element= {<AboutUs />}/>
            </Routes>
         </Layout>
       </BrowserRouter>
+       {<ItemListContainer title={title} />}
       {/* <Navbar categories={categories} title = "EP-Sport"/> */}
     </>
   );

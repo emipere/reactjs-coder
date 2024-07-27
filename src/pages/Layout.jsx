@@ -1,6 +1,8 @@
-import Navbar from "../component/Navbar/Navbar.jsx";
 import Footer from "../component/Footer/Footer.jsx";
-const Layout = ({children}) => {
+import Navbar from "../component/Navbar/Navbar.jsx";
+
+
+const Layout = ({ children }) => {
 return (
     <>
     <Navbar/>
