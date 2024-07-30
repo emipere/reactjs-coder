@@ -17,13 +17,13 @@ function App() {
       <BrowserRouter>
         <Layout>
           <Routes>
-            {/* <Route path="/" element=/>  {<ItemListContainer title={title} />}            */}
+            <Route path="/Home" element= {<ItemListContainer title={title} />} />          
             <Route path="/Contact" element={<Contact />}/>
             <Route path="/AboutUs" element= {<AboutUs />}/>
            </Routes>
         </Layout>
       </BrowserRouter>
-       {<ItemListContainer title={title} />}
+       {/* {<ItemListContainer title={title} />} */}
       {/* <Navbar categories={categories} title = "EP-Sport"/> */}
     </>
   );
