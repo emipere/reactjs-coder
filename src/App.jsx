@@ -5,6 +5,7 @@ import ItemListContainer from "./component/ItemListContainer/ItemListContainer.j
 import AboutUs from "./component/AboutUs/AboutUs.jsx";
 import Contact from "./component/Contact/Contact.jsx";
 import Layout from "./pages/Layout.jsx";
+import Error404 from "./component/Error404/Error404.jsx";
 
 
 
@@ -17,9 +18,11 @@ function App() {
       <BrowserRouter>
         <Layout>
           <Routes>
+            <Route path="/" element= {<ItemListContainer title={title} />} /> 
             <Route path="/home" element= {<ItemListContainer title={title} />} />          
             <Route path="/Contact" element={<Contact />}/>
             <Route path="/AboutUs" element= {<AboutUs />}/>
+            <Route path="*" element= {<Error404/>}/>
            </Routes>
         </Layout>
       </BrowserRouter>
