@@ -1,4 +1,4 @@
-export const categories = [" home "," gorra "," campera "," remera "," short "," medias "," Contact "," AboutUs "];
+export const categories = ["Home","gorra","campera","remera","short","medias","Contact","AboutUs"];
 
  
     
