@@ -19,7 +19,8 @@ function App() {
         <Layout>
           <Routes>
             <Route path="/" element= {<ItemListContainer title={title} />} /> 
-            <Route path="/home" element= {<ItemListContainer title={title} />} />          
+            <Route path="/home" element= {<ItemListContainer title={title} />} />  
+            <Route path="/category/:categoryId" element= {<ItemListContainer title={title} />} /> 
             <Route path="/Contact" element={<Contact />}/>
             <Route path="/AboutUs" element= {<AboutUs />}/>
             <Route path="*" element= {<Error404/>}/>
