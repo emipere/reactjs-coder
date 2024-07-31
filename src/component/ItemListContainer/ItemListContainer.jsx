@@ -28,10 +28,12 @@ const ItemListContainer = ({ title }) => {
 
   return (
     <main>
-      <button onClick={() => setCat("campera")}> Set Cat = campera </button>
+
+      
+      {/* <button onClick={() => setCat("campera")}> Set Cat = campera </button>
       <button onClick={() => setCat("remera")}> Set Cat = remera </button>
       <button onClick={() => setCat("short")}> Set Cat = short </button>
-      <button onClick={() => setCat("medias")}> Set Cat = medias </button>
+      <button onClick={() => setCat("medias")}> Set Cat = medias </button> */}
 
       <div className="container">
         <div>{title}</div>
