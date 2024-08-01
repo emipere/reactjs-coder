@@ -1,12 +1,16 @@
 
-import Spinner from 'react-bootstrap/Spinner';
+import spinner from './load.gif';
 
-function BasicExample() {
+export const Spinner =() => {
   return (
-    <Spinner animation="border" role="status">
-      <span className="visually-hidden">Loading...</span>
-    </Spinner>
+    <div>
+      <img
+      src= {spinner}
+      alt="gif de loading"
+      style= {{width:"400px", margin:"auto" , display:"blokc"}}/>
+      <p><h5>Buscando articulo...</h5> </p>
+      
+    </div>
   );
-}
+};
 
-export default BasicExample;

@@ -3,6 +3,6 @@
     flex-direction: column;
     justify-content: center;
     gap: 20px;
-    border: 5px solid black;
+    border: 7px solid rgb(113, 85, 108);
     width: 70%; 
  } 

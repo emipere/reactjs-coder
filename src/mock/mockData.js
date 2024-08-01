@@ -1,4 +1,4 @@
-export const categories = ["Home","gorra","campera","remera","short","medias","Contact","AboutUs"];
+export const categories = ["Gorra","Campera","Remera","Short","Medias"];
 
  
     
@@ -9,7 +9,7 @@ export const items = [
     precio: 2000,
     img: "https://res.cloudinary.com/dgmamzpbd/image/upload/v1722375620/emi/tgqhmzsaxaxmdjvkytoq.jpg",
     stock: 10,
-    category:["gorra"],
+    category:["Gorra"],
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ export const items = [
     precio: 12000,
     img: "https://res.cloudinary.com/dgmamzpbd/image/upload/v1722375620/emi/limutagacgwkkdpdssdk.jpg",
     stock: 15,
-    category:["campera"],
+    category:["Campera"],
   },
   {
     id: 3,
@@ -25,7 +25,7 @@ export const items = [
     precio: 8000,
     img: "https://res.cloudinary.com/dgmamzpbd/image/upload/v1722375620/emi/tnzcj83dleoo0deqpdb9.jpg",
     stock: 18,
-    category:["remera"],
+    category:["Remera"],
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ export const items = [
     precio: 3000,
     img: "https://res.cloudinary.com/dgmamzpbd/image/upload/v1722375620/emi/iu4egoxcrlgkx3er96oh.jpg",
     stock: 21,
-    category:["short"],
+    category:["Short"],
   },
   {
     id: 5,
@@ -41,6 +41,6 @@ export const items = [
     precio: 1500,
     img: "https://res.cloudinary.com/dgmamzpbd/image/upload/v1722375620/emi/zf4yhu4ctu2k8orbdmm4.jpg",
     stock: 19,
-    category:["medias"],
+    category:["Medias"],
   },
 ];

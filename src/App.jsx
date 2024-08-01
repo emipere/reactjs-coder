@@ -6,6 +6,7 @@ import AboutUs from "./component/AboutUs/AboutUs.jsx";
 import Contact from "./component/Contact/Contact.jsx";
 import Layout from "./pages/Layout.jsx";
 import Error404 from "./component/Error404/Error404.jsx";
+import ItemDetailContainer from "./component/ItemDetailContainer/ItemDetailContainer.jsx";
 
 
 
@@ -14,21 +15,18 @@ function App() {
 
   return (
     <>
-   
       <BrowserRouter>
         <Layout>
           <Routes>
-            <Route path="/" element= {<ItemListContainer title={title} />} /> 
-            <Route path="/home" element= {<ItemListContainer title={title} />} />  
-            <Route path="/category/:categoryId" element= {<ItemListContainer title={title} />} /> 
-            <Route path="/Contact" element={<Contact />}/>
-            <Route path="/AboutUs" element= {<AboutUs />}/>
-            <Route path="*" element= {<Error404/>}/>
-           </Routes>
+            <Route path="/" element={<ItemListContainer title={title} />} />
+            <Route path="/category/:categoryId" element={<ItemListContainer title={title} />}/>
+            <Route path="/product/:Id" element={<ItemDetailContainer/>}/> 
+            <Route path="/Contact" element={<Contact />} />
+            <Route path="/AboutUs" element={<AboutUs />} />
+            <Route path="*" element={<Error404 />} />
+          </Routes>
         </Layout>
       </BrowserRouter>
-       {/* {<ItemListContainer title={title} />} */}
-      {/* <Navbar categories={categories} title = "EP-Sport"/> */}
     </>
   );
 }

@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router-dom';
 
 const Item = ({product}) =>{
     return (
@@ -8,17 +9,13 @@ const Item = ({product}) =>{
       <Card.Img variant="top" src={product.img}/>
       <Card.Body>
         <Card.Title>{product.nombre}</Card.Title>
-        {/* <Card.Text>Poner decripcion del producto</Card.Text> */}
         <Card.Text>${product.precio}</Card.Text>
+        <Link to= {`/product/${product.id}`}>
         <Button variant="primary">Detalle</Button>
+        </Link>
       </Card.Body>
     </Card>
-    // <div> 
-    //     <div></div>
-    //     <div></div>
-    //     <div></div>
-       
-    // </div>
+    
     );
 };
 
