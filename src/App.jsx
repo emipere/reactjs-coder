@@ -20,7 +20,7 @@ function App() {
           <Routes>
             <Route path="/" element={<ItemListContainer title={title} />} />
             <Route path="/category/:categoryId" element={<ItemListContainer title={title} />}/>
-            <Route path="/product/:Id" element={<ItemDetailContainer/>}/> 
+            <Route path="/product/:id" element={<ItemDetailContainer/>}/> 
             <Route path="/Contact" element={<Contact />} />
             <Route path="/AboutUs" element={<AboutUs />} />
             <Route path="*" element={<Error404 />} />

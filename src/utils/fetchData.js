@@ -8,15 +8,12 @@ export const getProducts = (category) => {
     let filteredItems = [...items]
 
     if(category){
-    filteredItems=items.filter((items)=> 
+    filteredItems = items.filter((items) => 
     items.category.includes(category)
   );    
     }
     
-   
-
-
-    return new Promise ((resolve,reject)=>{
+   return new Promise ((resolve,reject) => {
        if (items.length > 0) {
         setTimeout(()=>{
             resolve(filteredItems);

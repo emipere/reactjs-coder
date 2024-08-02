@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
 const ItemDetail = ({product}) =>{
-    const {nombre,precio,img,stock} = product;
+    const {id,nombre,precio,img,stock} = product;
 
     return(
         <Card className="text-center">
@@ -17,7 +17,7 @@ const ItemDetail = ({product}) =>{
           </Card.Text>
           <Button variant="primary">Comprar</Button>
         </Card.Body>
-        <Card.Footer className="text-muted">Solo nos queda{stock}</Card.Footer>
+        <Card.Footer className="text-muted">Solo nos quedan{stock} unidades. Apurate!!</Card.Footer>
       </Card>
     )
 }
