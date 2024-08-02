@@ -14,7 +14,7 @@ export const items = [
   {
     id: 2,
     nombre: "Campera",
-    precio: 12000,
+    precio: 12500,
     img: "https://res.cloudinary.com/dgmamzpbd/image/upload/v1722375620/emi/limutagacgwkkdpdssdk.jpg",
     stock: 15,
     category:["Campera"],
