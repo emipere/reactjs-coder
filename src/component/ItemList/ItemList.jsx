@@ -5,7 +5,7 @@ const ItemList = ({ products }) => {
   return (
     <>
       <div className={`${"ItemsContainer"} d-flex`}>
-               {products.map((product) => {
+        {products.map((product) => {
           return <Item key={product.id} product={product} />;
         })}
       </div>
