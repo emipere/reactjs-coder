@@ -1,14 +1,18 @@
 import { useState, useEffect } from "react";
+import { useCartContext } from "../../context/CartContext";
 import ItemList from "../ItemList/ItemList";
 import "./ItemListContainer.css";
 import { getProducts } from "../../utils/fetchData";
 import { useParams } from "react-router-dom";
 import { Spinner } from "../spinner/Spinner";
 
-const ItemListContainer = ({ title }) => {
+
+  const ItemListContainer = () => {
   const [products, setproducts] = useState([]);
   const { categoryId } = useParams();
   const [loading, setLoading] = useState(true);
+  const {titulo} = useCartContext();
+
   useEffect(() => {
     setLoading(true);
     getProducts(categoryId)
@@ -26,7 +30,7 @@ const ItemListContainer = ({ title }) => {
   return (
     <main>
       <div className="container">
-        <div>{title}</div>
+        <div>{titulo}</div>
 
         {loading ? <Spinner /> : <ItemList products={products} />}
       </div>

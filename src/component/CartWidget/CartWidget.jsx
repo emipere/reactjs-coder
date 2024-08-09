@@ -1,5 +1,8 @@
+import { useCartContext } from "../../context/CartContext";
+
 const CartWidget = () => {
-  return <div>🛒7</div>;
+  const {qtyItems } = useCartContext();
+  return <div>🛒Tu carro tiene {qtyItems} productos</div>;
 };
 
 export default CartWidget;
