@@ -17,9 +17,10 @@ const ItemDetail = ({ product }) => {
   }
 
   return (
+    <div className="imagenx">
     <Card className="text-center">
       <Card.Header>{nombre}</Card.Header>
-      <Card.Img variant="top" src={img} className="imagenProducto"/>
+      <Card.Img variant="top" src={img} />
       <Card.Body>
         <Card.Title>${precio}</Card.Title>
         <Card.Text>No contiene detalle interno.</Card.Text>
@@ -29,6 +30,7 @@ const ItemDetail = ({ product }) => {
         Solo nos quedan{stock} unidades. Apurate!!
       </Card.Footer>
     </Card>
+    </div>
   );
 };
 
