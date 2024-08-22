@@ -1,41 +1,54 @@
 import { useState, useEffect } from "react";
+import { collection, getDoc, getDocs, query, where } from "firebase/firestore";
+import { db } from "../../firebase/dbConnection";
 import { useCartContext } from "../../context/CartContext";
 import ItemList from "../ItemList/ItemList";
 import "./ItemListContainer.css";
-import { getProducts } from "../../utils/fetchData";
 import { useParams } from "react-router-dom";
 import { Spinner } from "../spinner/Spinner";
 
 
   const ItemListContainer = () => {
-  const [products, setproducts] = useState([]);
-  const { categoryId } = useParams();
-  const [loading, setLoading] = useState(true);
-  const {titulo} = useCartContext();
+    const [products, setproducts] = useState([]);
+    const { categoryId } = useParams();
+    const [loading, setLoading] = useState(true);
+    const { titulo } = useCartContext();
 
-  useEffect(() => {
-    setLoading(true);
-    getProducts(categoryId)
-      .then((res) => {
-        setproducts(res);
-      })
-      .catch((error) => {
-        console.log(error);
-      })
-      .finally(() => {
-        setLoading(false);
-      });
-  }, [categoryId]);
+    useEffect(() => {
+      setLoading(true);
+      let productsCollection = collection(db, "productos");
 
-  return (
-    <main>
-      <div className="container">
-        <div>{titulo}</div>
+      if (categoryId) {
+        productsCollection = query(
+          productsCollection,
+          where("category", "array-contains", categoryId)
+        );
+      }
+      getDocs(productsCollection)
+        .then(({ docs }) => {
+          const prodFormDocs = docs.map((doc) => ({
+            id: doc.id,
+            ...doc.data(),
+          }));
+          setproducts(prodFormDocs);
+          setLoading(false);
+        })
+        .catch((error) => {
+          console.error("error getting documents: ", error);
+        });
+    }, [categoryId]);
 
-        {loading ? <Spinner /> : <ItemList products={products} />}
-      </div>
-    </main>
-  );
-};
+    return (
+      <main>
+        <div className="container">
+          <div>{titulo}</div>
 
-export default ItemListContainer;
+          {loading ? <Spinner /> : <ItemList products={products} />}
+        </div>
+      </main>
+    );
+  };
+
+  export default ItemListContainer;
+
+

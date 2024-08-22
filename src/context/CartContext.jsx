@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import {useState, useEffect, createContext, useContext } from "react";
+  
 
 const cartContext = createContext();
 
@@ -55,18 +56,42 @@ const  CartContextProvider = ({children}) => {
 
     }
 
-    const removeItem = () => {}
-    const clearCart = () => {}
+    const removeItem = (id,precio,qty) => {
+        setTotal(total - precio * qty);
+        setQtyItems(qtyItems - qty);
+
+        const newCart = cart.filter((elem)=> elem.id !==id);
+
+        setCart(newCart);
+        localStorage.setItem(`cart`,JSON.stringify(newCart))
+        localStorage.setItem(`total`,JSON.stringify(total))
+        localStorage.setItem(`qty`,JSON.stringify(qty)) 
+
+
+    }
+    
+    
+    const clearCart = () => {
+        setCart([])
+        setTotal(0)
+        setQtyItems(0)
+        localStorage.removeItem(`cart`)
+        localStorage.removeItem(`total`)
+        }
+    
 
     const contextValue = { 
         
         titulo: "Bienvenidos a la mejor tienda de deportes",
         qtyItems,
-        addToCart
+        addToCart,
+        total,
+        cart,
+        clearCart,
+        removeItem
     }
     return <Provider value ={contextValue}>{children}</Provider>
 }
 
 export default CartContextProvider;
 
-// llegue al min 1.36 clase 6

@@ -14,7 +14,7 @@ const Navbar = ({ title }) => {
           <Link to="/">
             <img src={logo} alt="logo de EP-Sport" />
           </Link>
-
+        
           <h1>{title}</h1>
         </div>
         <div className="navItems">

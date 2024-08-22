@@ -11,7 +11,7 @@ const ItemDetail = ({ product }) => {
   const {addToCart} = useCartContext();
   
   const handleOnBuy = (qty) => {
-        console.log(`Se agregaron ${qty} productos al carrito`);
+       
         const item = {id, nombre, precio}
         addToCart(item, qty);
   }
@@ -23,7 +23,7 @@ const ItemDetail = ({ product }) => {
       <Card.Img variant="top" src={img} />
       <Card.Body>
         <Card.Title>${precio}</Card.Title>
-        <Card.Text>No contiene detalle interno.</Card.Text>
+        <Card.Text>Confeccionado con materiales de las mas alta calidad.</Card.Text>
         <ItemCount stock={stock} initial={1} handleOnBuy={handleOnBuy}/>
         </Card.Body>
       <Card.Footer className="text-muted">

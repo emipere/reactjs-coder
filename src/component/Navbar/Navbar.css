@@ -3,11 +3,13 @@
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    padding: 0 20px;
+    padding: 0 80px;
+    text-shadow: 2px 2px 4px #db1d1d;
 
 }
 
 .navItem {
+    color: ghostwhite;
     cursor: pointer;
     text-decoration: none;
     font-size: 2rem;
@@ -15,4 +17,14 @@
 
 img {
    width: 12%;
+}
+.cart-widget {
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 80px;
+    text-shadow: 2px 2px 4px #211d1d;
+
 }

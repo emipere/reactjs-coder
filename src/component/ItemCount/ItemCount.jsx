@@ -45,9 +45,11 @@ const Itemcount = ({ stock, initial, handleOnBuy }) => {
       ) : (
         <>
           <div>
-            <button onClick={() => handleClick("-")}>-</button>
+            <Button variant="dark" onClick={() => handleClick("-")}>-</Button>
+           
             <span>{qty}</span>
-            <button onClick={() => handleClick("+")}>+</button>
+            
+            <Button variant="dark" onClick={() => handleClick("+")}>+</Button>
           </div>
 
           <Button variant="primary" onClick={handleAddToCart}>
