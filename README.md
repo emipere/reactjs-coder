@@ -1,8 +1,5 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+#Tienda online de EP-Sport
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+##Esta aplicación web, construida con React, es un carrito de compras para una tienda en línea especializada en productos deportivos EP-Sport. 
+Permite a los usuarios navegar por un catálogo de productos, agregar artículos al carrito, modificar cantidades, calcular totales y finalizar la compra.
